@@ -1,0 +1,89 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>小肥的音乐下载引擎</title>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <link rel='stylesheet prefetch' href='../static/css/reset.css'>
+	<link rel="stylesheet" type="text/css" href="../static/css/default.css">
+	<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons'>
+	<link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+	<style type="text/css">
+		body{margin:0; font-family:arial; font-size:13px;line-height:24px;}
+		form{margin:0; padding:0;}
+		a{color:#333;}
+		a:hover{color:#00c;}
+		#container{margin:19 auto;}
+		#content{margin-top:65px; margin-bottom:50px;}
+        #content #image{width:135px; height:180px; margin-left:auto; margin-right:auto;}
+        #content #title1{width:650px; height:20px; margin-left:auto; margin-right:auto;}
+		#content #shuru{width:650px; height:50px; margin-top:10px; margin-left:auto; margin-right:auto;}
+		#content #shuru .kuang{font-size:14px; line-height:25px;width:539px; height:36px; border:1px solid #ccc; border-right:none; padding-left:8px; padding-right:8px;}
+		#content #shuru .kuang:hover{border:1px solid #b8b8b8; border-right:none;}
+		#content #shuru .kuang:focus{border:1px solid #2d78f4; border-right:none;}
+		#content #shuru .button{width:100px; height:36px;background:#317ef3; border:1px solid transparent; font-size:15px; font-color:white;}
+		#content #shuru .button:hover{cursor:pointer; border-bottom:1px solid #2868c8; box-shadow:1px 1px 1px #ccc; background:#2d78f4;}
+        #content #div1{ overflow-y:auto; width:auto; height:650px; margin-left:auto; margin-right:auto;}
+		#footer{margin-left:auto;margin-right:auto;text-align:center;font:12px arial;}
+		#footer #footer1{margin-bottom:5px;}
+		#footer #footer1 a{color:#00c;padding:0 8.5px; word-spacing:3px;}
+		#footer #footer2{color:#666}
+		#footer #footer2 a{color:#666;}
+		#footer #footer2 span{display:inline-block; width:14px; height:17px; background:url("http://s1.bdstatic.com/r/www/cache/static/global/img/icons_3bfb8e45.png") -600px -96px no-repeat; position:relative; top:3px;}
+
+	</style>
+</head>
+<body>
+	<div id="container">
+        <div class="clearfloat"></div>
+		<div id="content">
+            <div id="image"><img width="135" height="180" src="../static/img/littlelogo.png"></div>
+			<div ><h1 id="title1">跟随小肥寻找想听的歌</h1></div>
+			<div id="shuru">
+                <input id="q" class="kuang" type="text" name="keyword">
+                <button class="button" type="button" style="color:white;" id="search" >开始搜索</button>
+			</div>
+            <div id="div1"></div>
+		</div>
+    </div>
+
+		<div id="footer">
+			<div id="footer2">
+				免责声明：本站搜索结果来源网络，不存储任何内容，只提供信息检索服务，对其合法性概不负责，亦不承担任何法律责任。</br>
+				©2016 <a href="https://blog.csdn.net/ghl1390490928">testweb</a> Powered by <a href="https://blog.csdn.net/ghl1390490928">Mr.Slash</a> BetaV1.0&nbsp;<span></span>
+			</div>
+		</div>
+	</div>
+
+    <script src='../static/js/stopExecutionOnTimeout.js?t=1'></script>
+	<script>
+	$(document).ready(function () {
+        $('#search').on('click', function (e) {
+	        e.preventDefault();
+		    var q=document.getElementById("q");
+		    if(q.value==null || q.value==""){
+				alert("少年，请输入需要搜索的信息！");
+				return false;}
+           else
+            {
+                var data = {};
+                data['keyword'] = q.value;
+                $.ajax({
+                    type:"post",
+                    data:data,
+                    dataType: 'html',
+                    success:function(data){
+                        $("#div1").html(data);
+                    },
+                    error:function(e) {
+                        $("#div1").html("获取数据失败！");
+                    }
+                });
+            }
+       });
+	});
+	</script>
+    <script>
+
+	</script>
+</body>
+</html>

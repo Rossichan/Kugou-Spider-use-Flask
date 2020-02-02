@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>歌曲列表</title>
+    <style type="text/css">
+        #table{width:auto; margin-left:auto; margin-right:auto;}
+    </style>
+</head>
+<body>
+<ul>
+    <table border="1" id="table">
+    <caption>查询结果</caption>
+        <tr>
+            <th>歌曲</th>
+            <th>歌手</th>
+            <th>文件大小</th>
+            <th>时长</th>
+            <th>链接</th>
+        </tr>
+        {% for music in list %}
+        <tr>
+            <td>{{ music['Song'] }}</td>
+            <td>{{ music['Singer'] }}</td>
+            <td>{{ music['Size'] }}</td>
+            <td>{{ music['minute'] }}:{{ music['second'] }}</td>
+            <td><a href="{{ music['url'] }}" target="_blank">下载</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</ul>
+
+</body>
+</html>
