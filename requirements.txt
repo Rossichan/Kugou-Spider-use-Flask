@@ -302,7 +302,7 @@ python-editor==1.0.3
 PyTweening==1.0.3
 pytz==2017.3
 PyWavelets==0.5.2
-PyYAML==3.12
+PyYAML==5.4
 pyzmq==16.0.3
 QtAwesome==0.4.4
 qtconsole==4.3.1
