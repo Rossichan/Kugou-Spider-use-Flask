@@ -189,7 +189,7 @@ pyecharts-javascripthon==0.0.6
 pyecharts-jupyter-installer==0.0.3
 pyecharts-snapshot==0.1.8
 pyflakes==1.6.0
-Pygments==2.2.0
+Pygments==2.7.4
 pylint==1.8.2
 pymongo==3.6.1
 PyMsgBox==1.0.6
