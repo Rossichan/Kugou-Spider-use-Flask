@@ -67,7 +67,7 @@ filelock==2.0.13
 Flask==0.12.2
 Flask-Babel==0.12.2
 Flask-Bootstrap==3.3.7.1
-Flask-Cors==3.0.3
+Flask-Cors==3.0.9
 Flask-HTTPAuth==3.2.4
 Flask-Login==0.4.1
 Flask-Mail==0.9.1
