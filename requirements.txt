@@ -129,7 +129,7 @@ MarkupSafe==1.0
 matplotlib==2.1.2
 mccabe==0.6.1
 mistune==0.8.3
-mitmproxy==4.0.1
+mitmproxy==7.0.3
 mpmath==1.0.0
 msgpack-python==0.5.1
 multidict==4.3.1
