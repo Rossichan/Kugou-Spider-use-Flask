@@ -122,7 +122,7 @@ ldap3==2.5
 llvmlite==0.21.0
 lml==0.0.2
 locket==0.2.0
-lxml==4.1.1
+lxml==4.6.5
 macropy3==1.1.0b2
 Mako==1.0.7
 MarkupSafe==1.0
