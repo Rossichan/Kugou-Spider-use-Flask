@@ -48,7 +48,7 @@ dask==0.16.1
 datashape==0.5.4
 debtcollector==1.20.0
 decorator==4.2.1
-distributed==1.20.2
+distributed==2021.10.0
 docutils==0.14
 dominate==2.3.5
 dukpy==0.2.2
