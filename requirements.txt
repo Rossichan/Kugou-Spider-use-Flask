@@ -318,7 +318,7 @@ ruamel.yaml==0.15.37
 scikit-image==0.13.1
 scikit-learn==0.19.1
 scipy==1.0.0
-Scrapy==1.5.0
+Scrapy==2.6.2
 scrapy-redis==0.6.8
 scrapy-splash==0.7.2
 seaborn==0.8.1
