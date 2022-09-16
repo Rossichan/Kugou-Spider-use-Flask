@@ -124,7 +124,7 @@ lml==0.0.2
 locket==0.2.0
 lxml==4.1.1
 macropy3==1.1.0b2
-Mako==1.0.7
+Mako==1.2.2
 MarkupSafe==1.0
 matplotlib==2.1.2
 mccabe==0.6.1
